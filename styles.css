@@ -15,6 +15,9 @@
     --surface-hover: #262626;
     --border: #333333;
     
+    /* Ganti url() di bawah dengan path gambar Anda jika ingin custom background (misal: url('assets/bg.jpg')) */
+    --bg-image: url(''); 
+    
     --font-main: 'Inter', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -25,6 +28,11 @@ html {
 
 body {
     background-color: var(--bg-color);
+    /* Implementasi custom background dengan overlay gelap */
+    background-image: linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.95)), var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: var(--text-main);
     font-family: var(--font-main);
     line-height: 1.6;
@@ -192,11 +200,38 @@ section {
 
 /* Hero Section */
 #hero {
-    align-items: flex-start;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+}
+
+.hero-image {
+    flex-shrink: 0;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    border-color: var(--accent);
+    transform: scale(1.02);
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 600px;
 }
 
 .subtitle {
@@ -272,6 +307,27 @@ section {
 .skill-category p {
     font-size: 1rem;
     line-height: 1.7;
+}
+
+.cert-list {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.cert-list li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.cert-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
 }
 
 /* Projects Section */
@@ -403,13 +459,25 @@ footer {
         gap: 3rem;
     }
     
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 100%;
     }
     
     .hero-buttons .btn {
         width: 100%;
         justify-content: center;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
     }
 }
