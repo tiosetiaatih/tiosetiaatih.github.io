@@ -44,23 +44,4 @@ window.addEventListener('scroll', () => {
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Simple form submission handler
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Simulate form submission
-        const btn = this.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
-        
-        btn.textContent = 'Sending...';
-        btn.disabled = true;
-        
-        setTimeout(() => {
-            alert('Thank you! Your message has been sent.');
-            contactForm.reset();
-            btn.textContent = originalText;
-            btn.disabled = false;
-        }, 1500);
-    });
-}
+// Simple form submission is now handled by FormSubmit (see index.html form action)

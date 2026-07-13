@@ -14,10 +14,10 @@
     --surface: #1a1a1a;
     --surface-hover: #262626;
     --border: #333333;
-    
+
     /* Ganti url() di bawah dengan path gambar Anda jika ingin custom background (misal: url('assets/bg.jpg')) */
-    --bg-image: url(''); 
-    
+    --bg-image: url('assets/background.jpg');
+
     --font-main: 'Inter', sans-serif;
     --transition: all 0.3s ease;
 }
@@ -50,7 +50,9 @@ ul {
 }
 
 /* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-weight: 700;
     line-height: 1.2;
 }
@@ -159,6 +161,7 @@ nav {
     border: 1px solid var(--border);
     color: var(--text-main);
 }
+
 .btn-outline:hover {
     border-color: var(--accent);
     background-color: var(--surface);
@@ -221,7 +224,7 @@ section {
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid var(--border);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: var(--transition);
 }
 
@@ -289,7 +292,7 @@ section {
     transform: translateY(-8px);
     border-color: var(--text-muted);
     background-color: var(--surface-hover);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .skill-category h3 {
@@ -334,6 +337,7 @@ section {
 .projects-content {
     text-align: center;
 }
+
 .projects-content p {
     margin-bottom: 2.5rem;
     font-size: 1.2rem;
@@ -410,8 +414,13 @@ footer {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .scroll-element {
@@ -440,7 +449,7 @@ footer {
         border-bottom: 1px solid var(--border);
         gap: 1.5rem;
     }
-    
+
     .nav-links.active {
         display: flex;
     }
@@ -458,7 +467,7 @@ footer {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
-    
+
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
@@ -470,12 +479,12 @@ footer {
         align-items: center;
         width: 100%;
     }
-    
+
     .hero-buttons .btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .profile-pic {
         width: 200px;
         height: 200px;
