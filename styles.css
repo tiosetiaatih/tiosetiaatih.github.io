@@ -29,7 +29,7 @@ html {
 body {
     background-color: var(--bg-color);
     /* Implementasi custom background dengan overlay gelap */
-    background-image: linear-gradient(rgba(13, 13, 13, 0.9), rgba(13, 13, 13, 0.95)), var(--bg-image);
+    background-image: linear-gradient(rgba(13, 13, 13, 0.75), rgba(13, 13, 13, 0.85)), var(--bg-image);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
